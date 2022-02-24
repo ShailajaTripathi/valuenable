@@ -93,20 +93,7 @@ function Introduction() {
             <Input.Password placeholder="Confirm your password" />
           </Form.Item>
 
-          <Form.Item name="stage" label="Business Stage"
-           rules={[
-            {
-              required: true,
-              message: "Please Select valid stage",
-            },
-          ]}
-          >
-            <Select placeholder="Select Business Stage">
-              <Select.Option value="Start-up">Start-up</Select.Option>
-              <Select.Option value="Scale-up">Scale-up</Select.Option>
-            </Select>
-          </Form.Item>
-
+         
           <Form.Item
             name="dob"
             label="Date of Birth"
@@ -155,7 +142,7 @@ function Introduction() {
             </Checkbox>
           </Form.Item>
 
-          <Form.Item wrapperCol={{ span: 13 }}>
+          <Form.Item wrapperCol={{ span: 6 }}>
             <Button block type="danger" htmlType="submit">
               Submit
             </Button>
