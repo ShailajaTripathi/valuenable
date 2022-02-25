@@ -1,11 +1,11 @@
 import React from 'react'
-import { Form, Button, Checkbox, DatePicker, Input, Select, Space } from "antd";
+import { Form, Button, Checkbox, Input} from "antd";
 import './login.css'
 
-function Introduction() {
+function Login() {
   return (
  <div className="intro">
-   <h2>Enter Business Details Here</h2>
+   <h2>Login page</h2>
       <header className="App-header">
         <Form
           autoComplete="off"
@@ -68,49 +68,8 @@ function Introduction() {
           >
             <Input.Password placeholder="Type your password" />
           </Form.Item>
-
-          <Form.Item
-            name="confirmPassword"
-            label="Confirm Password"
-            dependencies={["password"]}
-            rules={[
-              {
-                required: true,
-              },
-              ({ getFieldValue }) => ({
-                validator(_, value) {
-                  if (!value || getFieldValue("password") === value) {
-                    return Promise.resolve();
-                  }
-                  return Promise.reject(
-                    "The two passwords that you entered does not match."
-                  );
-                },
-              }),
-            ]}
-            hasFeedback
-          >
-            <Input.Password placeholder="Confirm your password" />
-          </Form.Item>
-
          
-          <Form.Item
-            name="dob"
-            label="Date of Birth"
-            rules={[
-              {
-                required: true,
-                message: "Please provide your date of birth",
-              },
-            ]}
-            hasFeedback
-          >
-            <DatePicker
-              style={{ width: "50%" }}
-              picker="date"
-              placeholder="Chose date of birth"
-            />
-          </Form.Item>
+       
 
           <Form.Item
             name="website"
@@ -143,8 +102,8 @@ function Introduction() {
           </Form.Item>
 
           <Form.Item wrapperCol={{ span: 6 }}>
-            <Button block type="danger" htmlType="submit">
-              Submit
+            <Button block type="danger" htmlType="submit"  style={{ marginLeft:'80%'}}>
+             Login
             </Button>
           </Form.Item>
         </Form>
@@ -153,4 +112,4 @@ function Introduction() {
   )
 }
 
-export default Introduction
+export default Login
